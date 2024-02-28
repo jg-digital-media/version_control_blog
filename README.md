@@ -1,5 +1,10 @@
-# version_control_blog
+# version_control_blog - 28-02-2024 - 16:38
 Final repository linked to my blog on using version control e.g. Git in your projects
+
+
+## Latest Blog Edits
+
+. . .
 
 ## Steps to Take
 
