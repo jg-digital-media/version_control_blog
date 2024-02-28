@@ -1,0 +1,31 @@
+/*******
+*
+* Last Update: 28-02-2024 - 16:32
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+}
+
+table {
+  display: block;
+  margin: 10px auto;
+  border: solid black 1px;
+  width: 75%;
+}
+
+.future-projects {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+}
+
+/*# sourceMappingURL=style.css.map */
