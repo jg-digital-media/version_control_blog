@@ -12,7 +12,7 @@
 <body>
     
 
-    <h1>Temporary project - a use case into the use of version control</h1>
+    <h1>A use case into the use of version control</h1>
     <hr />
 
     <table>
