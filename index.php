@@ -32,6 +32,10 @@
             <td>1.3</td>
             <td>Without our shields, at this range it is probable a photon detonation could destroy the Enterprise.</td>
         </tr>
+        <tr>
+            <td>1.4</td>
+            <td>Damage report? Sections 27, 28 and 29 on decks four, five and six destroyed.</td>
+        </tr>
     </table>
 
     <div class="future-projects">
@@ -39,7 +43,6 @@
         <h2>Future Projects</h2>
 
         <ul>
-            <li>Damage report? Sections 27, 28 and 29 on decks four, five and six destroyed.</li>
             <li>Radiation levels in our atmosphere have increased by 3,000 percent. </li>
             <li>We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies.</li>
             <li>It indicates a synchronic distortion in the areas emanating triolic waves.</li>
