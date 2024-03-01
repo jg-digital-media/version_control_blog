@@ -1,4 +1,4 @@
-# version_control_blog - 29-02-2024 - 15:10
+# version_control_blog - 01-03-2024 - 14:28
 Final repository linked to my blog on using version control e.g. Git in your projects
 
 
@@ -157,7 +157,34 @@ git branch origin -d new_feature or git branch origin --delete new_feature
 
 Now we're up to log 1.5
 
+We have since develped a new feature.  1.6.
 
+Let's reflect this using the Git Flow strategy
+
+git checkout -b develop
+git checkout -b feature/feature_v1_6
+
+git push -u origin feature/feature_b1.6
+git push -u origin develop
+
+We're now ready to develop changes and keep it up to date with the remote repository.
+
+git branch -d feature/feature_v1.6 develop
+
+git commit -m "first implementation of log 1.6"
+
+let's make sure the branches are up to date.
+
+git checkout feature/feature_v1.6
+
+This will bring the changes from develop, into feature_v1.6
+
+But there's been a bug reported in the system.
+git checkout develop
+
+"Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems."
+
+git add index.php
 
 
 ## Steps to Take
@@ -174,7 +201,7 @@ Now we're up to log 1.5
 
 ```git checkout -b new_branch```
 
-```git push --set-upstream origin new_branch```
+```git push --set-upstream origin new_branch``` or ```git push -u origin develop```
 
 ```git checkout main - git checkout new_branch```
 
@@ -184,6 +211,6 @@ Now we're up to log 1.5
 
 ```git branch -d new_branch``` - deleted named local branch
 
-```git branch origin -d new_branch``` - deleted named remote branch
+```git push origin --delete <branch_name>``` or ```git push origin -d new_branch``` or ```git branch push -d <branch_one> <branch_two>``` - deleted named remote branch
 
 ``````
