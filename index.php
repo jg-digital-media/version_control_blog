@@ -40,6 +40,10 @@
             <td>1.5</td>
             <td>Radiation levels in our atmosphere have increased by 3,000 percent.</td>
         </tr>
+        <tr>
+            <td>1.6</td>
+            <td>We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies.</td>
+        </tr>
     </table>
 
     <div class="future-projects">
@@ -47,7 +51,7 @@
         <h2>Future Projects</h2>
 
         <ul>
-            <li>We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies.</li>
+            <li></li>
             <li>It indicates a synchronic distortion in the areas emanating triolic waves.</li>
         </ul>
 
