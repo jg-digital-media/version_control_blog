@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>1.6</td>
-            <td>We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies.</td>
+            <td>Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems.</td>
         </tr>
     </table>
 
