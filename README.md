@@ -1,18 +1,18 @@
-# version_control_blog - 01-03-2024 - 14:34
+# version_control_blog - 01-03-2024 - 14:40
 Final repository linked to my blog on using version control e.g. Git in your projects
 
 
 ## Latest Blog Edits
 
-```
+
 The purpose of this blog is to simulate the process of website/software development using version control. Part of the reason for this is because I so often work on my own and I'm not experienced in using Git to work in collaboration with others. I work with branches of course and try to introduce changes to code safely and iteratively but that's really it.  
 
 I love working with Git to manage my work and as a backup source.  So on the 28th February I created a simple page that acts as a "development log" which represent stages of development of a project.  The "project" can be anything you like but in reality the repository  [LINK]is just this page.
 
-Let's get started.  (I'll show all my working out on the way)
-```
+Let's get started. (I'll show all my working out on the way)
 
-our starting point....
+
+Our starting point....
 
 
 
@@ -185,6 +185,32 @@ git checkout develop
 "Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems."
 
 git add index.php
+
+git commit -m "implement feature fix v1.6"
+
+We should merge this into the feature branch
+
+git checkout feature/feature_v1.6
+
+git merge develop.  
+
+Now when I run git status the branch is ahead of the remote repository by 2 commits. Which we can fix by git push
+
+The fix is now ready and cam be safely merged to the main brancj
+
+git checkout main
+
+git merge develop   - ahead by 2
+
+git push
+
+
+We can now delete the branches locally whuch  cam be achieved in one command
+
+git branch -d develop feature/feature_v1.6
+
+git push origin -d origin develop feature/feature_1.6
+
 
 
 ## Steps to Take
