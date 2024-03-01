@@ -1,4 +1,4 @@
-# version_control_blog - 01-03-2024 - 14:40
+# version_control_blog - 01-03-2024 - 14:54
 Final repository linked to my blog on using version control e.g. Git in your projects
 
 
@@ -66,25 +66,28 @@ Our starting point....
 
     </div>
 
-```
 I also have a sass file with some basic styling applied. 
-```
 
-### git add 
+We'll add a new table row that represents the implementation of a new feature
 
-```
-
+```html
 <tr>
     <td>1.4</td>
     <td>Damage report? Sections 27, 28 and 29 on decks four, five and six destroyed.</tr>
 </tr>
 ```
 
+Now that this is done, we need to add the change to the staging area and commit it.
+
 ```git add index.php```
 
 ```git commit -m "commit message goes here"```
 
+This was done on the main branch, but in reality all development is done on separate branches leaving the main or the master branch ready for production code only.
+
 ### branching
+
+Let's create a new branch where we can safely create changes to our code without affecting anything in the production branch
 
 ```git checkout -b new_feature```
 
@@ -92,13 +95,13 @@ we've now moved automatically to the new branch. But let's confirm anyway with t
 
 ```git branch -a```
 
-now we're ready to implement our new feature. let's move to the new branch, using the checkout command
+this will give us a list of all branches that exist in the local and remote repository. Now we're ready to implement our new feature. let's move to the new branch, using the checkout command.
 
 ```git checkout new_feature```
 
 Can now implement the new changes 
 
-```
+```html
 <table>
         <tr>
             <th>Version</th>
@@ -127,33 +130,33 @@ Can now implement the new changes
     </table>
 ```
 
-add index.php
+```add index.php```
 
-git commit -m "add feature 1.5"
+```git commit -m "add feature 1.5"```
 
 now we have to make sure the new branch is available in the remote repository. 
 
-git push --set-upstream origin new_feature  - doing this will add the branch on github
+```git push --set-upstream origin new_feature```- writing this command doing this will add the branch on github
 
-use git checkout branch> to switch between branches and compare versions. 
+use ```git checkout <branch_name>``` to switch between branches and compare versions. 
 
-It's important to update and remove unndeded branches regularly.  We can see that we can cleanly merge the changes in new_feature to the main branch.
+It's important to update and remove unndeded branches regularly. We can see that we can cleanly merge the changes in new_feature to the main branch.
 
-git checkout main
+```git checkout main```
 
-git merge new_feature
+```git merge new_feature```
 
 With the branches succesfully merged we can remove the new feature branch from both the local and remote repository.
 
-
-the git log shows all the branches used to create this new feature, but only while those bracnches exist.
-
+the git log shows all the branches used to create this new feature, but only while those bracnches exist.  Let's keep the branches clean by deleting them from the log and the list of existing branches
 
 
-git branch -d new_feature
+```git branch -d new_feature```
 
 
-git branch origin -d new_feature or git branch origin --delete new_feature
+```git branch origin -d new_feature``` or ```git branch origin --delete new_feature```
+
+### The Git Flow Strategy
 
 Now we're up to log 1.5
 
