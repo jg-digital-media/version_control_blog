@@ -167,43 +167,54 @@ Let's reflect this using the Git Flow strategy
 git checkout -b develop
 git checkout -b feature/feature_v1_6
 
+We've created 2 new local branches. And they need to be linked to remote branches. 
+
 git push -u origin feature/feature_b1.6
 git push -u origin develop
 
 We're now ready to develop changes and keep it up to date with the remote repository.
 
-git branch -d feature/feature_v1.6 develop
+git branch -d feature/feature_v1.6 develop  
 
-git commit -m "first implementation of log 1.6"
+````git commit -m "first implementation of log 1.6"```
 
 let's make sure the branches are up to date.
-
+git push
 git checkout feature/feature_v1.6
+git merge develop
+
 
 This will bring the changes from develop, into feature_v1.6
 
 But there's been a bug reported in the system.
-git checkout develop
+
+Let's go back to the develop branch and take a look.
+
+```git checkout develop```
+
+Let's represent our bug fix by changing the text content of the 1.6 log. 
 
 "Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems."
 
-git add index.php
+```git add index.php```
 
-git commit -m "implement feature fix v1.6"
+```git commit -m "implement feature fix v1.6"```
 
 We should merge this into the feature branch
 
-git checkout feature/feature_v1.6
+```git checkout feature/feature_v1.6```
 
-git merge develop.  
+```git merge develop.```  
 
 Now when I run git status the branch is ahead of the remote repository by 2 commits. Which we can fix by git push
 
-The fix is now ready and cam be safely merged to the main brancj
+The fix is now ready and can be safely merged to the main branch
 
 git checkout main
 
-git merge develop   - ahead by 2
+git merge develop   
+
+Now when you run git status it shows us that the branch is ahead - ahead by 2
 
 git push
 
@@ -214,7 +225,9 @@ git branch -d develop feature/feature_v1.6
 
 git push origin -d origin develop feature/feature_1.6
 
+Hope this gives you can idea of what is involved in managing and developing projects using version control.
 
+Link to Blog - Coming Soon
 
 ## Steps to Take
 
