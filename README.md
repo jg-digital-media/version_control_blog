@@ -1,4 +1,4 @@
-# version_control_blog - 01-03-2024 - 14:28
+# version_control_blog - 01-03-2024 - 14:34
 Final repository linked to my blog on using version control e.g. Git in your projects
 
 
@@ -195,17 +195,17 @@ git add index.php
 `https://github.com/jg-digital-media/version_control_blog` - verifies the url of the repository
 
 
-```git add index.php```
+```git add index.php``` - add files to staging area ready for commit
 
-```git commit -m "commit message goes here"```
+```git commit -m "commit message goes here"``` - commit changes to the current branch
 
-```git checkout -b new_branch```
+```git checkout -b new_branch``` - Create a new branch and automatically switch to it
 
-```git push --set-upstream origin new_branch``` or ```git push -u origin develop```
+```git push --set-upstream origin new_branch``` or ```git push -u origin develop``` - Create a link to a branch in the remote repository
 
-```git checkout main - git checkout new_branch```
+```git checkout main``` or ```git checkout new_branch``` - Switch between branches in local repository
 
-```git merge new_branch``` - merge changes to main/master branch
+```git merge new_branch```- merge changes from one branch into the current branch
 
 ```git branch -a```- list local and remote branches
 
