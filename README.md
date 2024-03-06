@@ -1,4 +1,4 @@
-# version_control_blog - 01-03-2024 - 14:54
+# version_control_blog - 06-03-2024 - 14:07
 Final repository linked to my blog on using version control e.g. Git in your projects
 
 
@@ -7,14 +7,11 @@ Final repository linked to my blog on using version control e.g. Git in your pro
 
 The purpose of this blog is to simulate the process of website/software development using version control. Part of the reason for this is because I so often work on my own and I'm not experienced in using Git to work in collaboration with others. I work with branches of course and try to introduce changes to code safely and iteratively but that's really it.  
 
-I love working with Git to manage my work and as a backup source.  So on the 28th February I created a simple page that acts as a "development log" which represent stages of development of a project.  The "project" can be anything you like but in reality the repository  [LINK]is just this page.
+I love working with Git to manage my work and as a backup source. So on the 28th February, I created a simple page that acts as a "development log" which represents the stages of development of a project. The "project" can be anything you like but in reality, the repository [LINK](https://github.com/jg-digital-media/version_control_blog) is just this page.
 
 Let's get started. (I'll show all my working out on the way)
 
-
-Our starting point....
-
-
+This is our starting point. An HTML page with a simple table with rows that represent completed features or bug fixes.
 
 ```html
 <!DOCTYPE html>
@@ -66,9 +63,9 @@ Our starting point....
 
     </div>
 
-I also have a sass file with some basic styling applied. 
+I also have a Sass file with some basic styling applied.
 
-We'll add a new table row that represents the implementation of a new feature
+But we'll start off by adding a new table row that represents the implementation of a new feature.
 
 ```html
 <tr>
@@ -83,23 +80,24 @@ Now that this is done, we need to add the change to the staging area and commit 
 
 ```git commit -m "commit message goes here"```
 
-This was done on the main branch, but in reality all development is done on separate branches leaving the main or the master branch ready for production code only.
+This was done on the main branch, but in reality, all development is done on separate branches leaving the main or the master branch ready for production code only. Let's apply that to our project now by working with Git branches. 
 
 ### branching
 
-Let's create a new branch where we can safely create changes to our code without affecting anything in the production branch
+Let's create a new branch where we can safely create changes to our code without affecting anything in the production branch.
 
 ```git checkout -b new_feature```
 
-we've now moved automatically to the new branch. But let's confirm anyway with the -a flag on git branch.
+We've now moved automatically to the new branch. But let's confirm anyway with the -a flag on the git branch commmand.
 
 ```git branch -a```
 
-this will give us a list of all branches that exist in the local and remote repository. Now we're ready to implement our new feature. let's move to the new branch, using the checkout command.
+This will give us a list of all branches that exist in the local and remote repositories. Now we're ready to implement our new feature. Let's move to the new branch, using the checkout command.
 
 ```git checkout new_feature```
 
-Can now implement the new changes 
+We can now work on implementing the new changes.
+
 
 ```html
 <table>
@@ -129,26 +127,28 @@ Can now implement the new changes
         </tr>
     </table>
 ```
+Making sure we're in the <new_feature> branch, we're ready to add the new feature to the staging area.
 
 ```add index.php```
 
 ```git commit -m "add feature 1.5"```
 
-now we have to make sure the new branch is available in the remote repository. 
+Now we have to make sure the new branch is available in the remote repository. 
 
-```git push --set-upstream origin new_feature```- writing this command doing this will add the branch on github
+```git push --set-upstream origin new_feature```
+writing the command above doing this will add the branch on GitHub.
 
 use ```git checkout <branch_name>``` to switch between branches and compare versions. 
 
-It's important to update and remove unndeded branches regularly. We can see that we can cleanly merge the changes in new_feature to the main branch.
+It's important to update and remove unneeded branches regularly. We can see that we can cleanly merge the changes in new_feature to the main branch.
 
 ```git checkout main```
 
 ```git merge new_feature```
 
-With the branches succesfully merged we can remove the new feature branch from both the local and remote repository.
+With the branches successfully merged we can remove the new feature branch from both the local and remote repository.
 
-the git log shows all the branches used to create this new feature, but only while those bracnches exist.  Let's keep the branches clean by deleting them from the log and the list of existing branches
+The git log command shows all the branches used to create this new feature, but only while those bracnches exist.  Let's keep the branches clean by deleting them from the log and the list of existing branches.
 
 
 ```git branch -d new_feature```
@@ -156,13 +156,15 @@ the git log shows all the branches used to create this new feature, but only whi
 
 ```git branch origin -d new_feature``` or ```git branch origin --delete new_feature```
 
+These are the commands needed to remove branches from a remote repository on GitHub. These commands will help keep your repositories organised and clean. 
+
 ### The Git Flow Strategy
 
 Now we're up to log 1.5
 
-We have since develped a new feature.  1.6.
+We have since develped a new feature. Log 1.6.
 
-Let's reflect this using the Git Flow strategy
+Let's reflect this using the Git Flow strategy. We're going to create 2 new branches to introduce new code and bug fixes to our project.
 
 git checkout -b develop
 git checkout -b feature/feature_v1_6
@@ -174,9 +176,23 @@ git push -u origin develop
 
 We're now ready to develop changes and keep it up to date with the remote repository.
 
-git branch -d feature/feature_v1.6 develop  
 
-````git commit -m "first implementation of log 1.6"```
+```git branch -d feature/feature_v1.6 develop ``` 
+
+We've come to the "develop" where we can implement new changes. 
+
+```html
+    <tr>
+        <td>1.6</td>
+        <td>Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems.</td>
+    </tr>
+```
+
+```git commit -m "first implementation of log 1.6"```
+
+We've now committed these changes to the development branch so we can now add it as a "feature".
+
+Let's make sure the branches are up to date. By pushing the new work to the branch and moving to the feature branch.
 
 let's make sure the branches are up to date.
 git push
@@ -186,7 +202,7 @@ git merge develop
 
 This will bring the changes from develop, into feature_v1.6
 
-But there's been a bug reported in the system.
+The latest feature has been passed off and built into the system. But there's been a bug reported in the system.
 
 Let's go back to the develop branch and take a look.
 
@@ -200,7 +216,7 @@ Let's represent our bug fix by changing the text content of the 1.6 log.
 
 ```git commit -m "implement feature fix v1.6"```
 
-We should merge this into the feature branch
+We should merge this into the feature/feature_v1.6 branch.
 
 ```git checkout feature/feature_v1.6```
 
@@ -208,7 +224,7 @@ We should merge this into the feature branch
 
 Now when I run git status the branch is ahead of the remote repository by 2 commits. Which we can fix by git push
 
-The fix is now ready and can be safely merged to the main branch
+The fix is now ready and can be safely merged into the main branch
 
 git checkout main
 
@@ -219,7 +235,7 @@ Now when you run git status it shows us that the branch is ahead - ahead by 2
 git push
 
 
-We can now delete the branches locally whuch  cam be achieved in one command
+We can now delete the branches locally which can be achieved in one command
 
 git branch -d develop feature/feature_v1.6
 
@@ -227,7 +243,7 @@ git push origin -d origin develop feature/feature_1.6
 
 Hope this gives you can idea of what is involved in managing and developing projects using version control.
 
-Link to Blog - Coming Soon
+Link to Blog - [https://blog.jonniegrieve.co.uk/blog_posts/working-with-version-control/](https://blog.jonniegrieve.co.uk/blog_posts/working-with-version-control/)
 
 ## Steps to Take
 
