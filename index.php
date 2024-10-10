@@ -10,9 +10,17 @@
 </head>
 
 <body>
-    
+
+    <nav class="nav">
+        
+        <ul>        
+            <li><a href="https://blog.jonniegrieve.co.uk/blog_posts/working-with-version-control/" target="_blank">Blog Post </a></li>
+            <li><a href="https://github.com/jg-digital-media/version_control_blog" target="_blank">Repository</a></li>
+        </ul>
+    </nav>
 
     <h1>A use case into the use of version control</h1>
+    
     <hr />
 
     <table>
