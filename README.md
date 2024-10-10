@@ -1,9 +1,12 @@
-# version_control_blog - 06-03-2024 - 14:07
-Final repository linked to my blog on using version control e.g. Git in your projects
+# Version Control Example Blog (version_control_blog/) - 10-10-2024 - 13:41
 
+Final repository linked to my blog on using version control (e.g. Git) in your projects
+       
+  + [https://blog.jonniegrieve.co.uk/blog_posts/working-with-version-control/"](Blog Post)
+  + [https://github.com/jg-digital-media/version_control_blog](Repository)
+        
 
 ## Latest Blog Edits
-
 
 The purpose of this blog is to simulate the process of website/software development using version control. Part of the reason for this is because I so often work on my own and I'm not experienced in using Git to work in collaboration with others. I work with branches of course and try to introduce changes to code safely and iteratively but that's really it.  
 
