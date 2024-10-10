@@ -1,6 +1,6 @@
 /*******
 *
-* Last Update: 28-02-2024 - 16:32
+* Last Update: 10-10-2024 - 13:31
 */
 
 * {
@@ -9,6 +9,35 @@
     margin: 0;
 }
 
+
+nav {
+
+    text-align: center;
+    background: #000000;
+    height: 25px;
+    border: solid red 1px;
+
+    ul {
+
+        li {
+
+            display: inline-block;
+            margin: 0 7px;
+
+            a {
+
+                color: rgb(255, 255, 255);
+                transition: color .3s;
+
+                &:hover {
+
+                    color: gold;
+                }
+
+            }
+        }
+    }
+}
 
 
 h1 {
