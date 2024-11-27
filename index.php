@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 
+    <link rel="icon" href="favicon.png" type="image/png">
+
     <title>Version Control Blog</title>
 </head>
 
